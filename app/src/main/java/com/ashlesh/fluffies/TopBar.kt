@@ -25,7 +25,7 @@ fun TopBar(onToggle: () -> Unit) {
                 text = "Hey Buddy!",
                 textAlign = TextAlign.Start,
                 style = MaterialTheme.typography.h5,
-                color = MaterialTheme.colors.surface
+                color = MaterialTheme.colors.primary
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -34,7 +34,7 @@ fun TopBar(onToggle: () -> Unit) {
                 text = "Adopt a new cat-scientist near you!",
                 textAlign = TextAlign.Start,
                 style = MaterialTheme.typography.subtitle1,
-                color = MaterialTheme.colors.surface
+                color = MaterialTheme.colors.primary
             )
         }
         Row(

@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <bool name="lightNavEnabled">true</bool>
 
-    <style name="Theme.Fluffies" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:statusBarColor">@color/purple_700</item>
+    <style name="Theme.dev.ashlesh.fluffies" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/bg</item>
+        <item name="colorPrimaryVariant">@color/bg</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/lightNavEnabled</item>
+        <item name="android:navigationBarColor" tools:targetApi="o">?colorSurface</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">@bool/lightNavEnabled
+        </item>
     </style>
+
+    <style name="Theme.dev.ashlesh.fluffies.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.dev.ashlesh.fluffies..AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.dev.ashlesh.fluffies.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

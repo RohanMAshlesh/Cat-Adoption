@@ -64,18 +64,18 @@ fun DetailsView(id: Int) {
             .background(color = colorResource(id = com.ashlesh.fluffies.R.color.background))
     ) {
 
-        val cat = FakeCatDatabase.catList[id]
+        val cat = FakeCatDatabase.catList[id - 1]
 
         // Basic details
         item {
             cat.apply {
 
-                val dogImage: Painter = painterResource(id = cat.image)
+                val catImage: Painter = painterResource(id = cat.image)
                 Image(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(346.dp),
-                    painter = dogImage,
+                    painter = catImage,
                     alignment = Alignment.CenterStart,
                     contentDescription = "",
                     contentScale = ContentScale.Crop
@@ -110,7 +110,7 @@ fun DetailsView(id: Int) {
             cat.apply {
 
                 Spacer(modifier = Modifier.height(24.dp))
-                Title(title = "Dog info")
+                Title(title = "Cat info")
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(
                     modifier = Modifier

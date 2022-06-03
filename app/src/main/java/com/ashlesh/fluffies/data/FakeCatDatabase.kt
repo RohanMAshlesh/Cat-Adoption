@@ -5,13 +5,14 @@ import com.ashlesh.fluffies.model.Cat
 import com.ashlesh.fluffies.model.Owner
 
 object FakeCatDatabase {
-    val owner = Owner("John Doe", "I am a simple guy who loves cat", R.drawable.owner)
+    val owner =
+        Owner("Dr Sheldon Cooper", "B.S., M.S., MA, Ph.D., and Sc.D., OMG RIGHT!", R.drawable.owner)
     val catList = listOf(
         Cat(
             1,
             "Enrico Fermi",
             2.0,
-            "male",
+            "Male",
             "white",
             7.2,
             "850 m",
@@ -23,7 +24,7 @@ object FakeCatDatabase {
             2,
             "Richard Feynman",
             1.3,
-            "male",
+            "Female",
             "black",
             5.3,
             "890 m",
@@ -35,7 +36,7 @@ object FakeCatDatabase {
             3,
             "Edward Teller",
             2.6,
-            "male",
+            "Male",
             "black",
             8.3,
             "790 m",
@@ -47,7 +48,7 @@ object FakeCatDatabase {
             4,
             "Otto Frisch",
             1.2,
-            "male",
+            "Male",
             "colorful",
             3.3,
             "700 m",
@@ -59,7 +60,7 @@ object FakeCatDatabase {
             5,
             "Panofsky,",
             4.1,
-            "male",
+            "Female",
             "brown",
             4.3,
             "390 m",
@@ -71,7 +72,7 @@ object FakeCatDatabase {
             6,
             "Zazzles",
             0.7,
-            "male",
+            "Male",
             "yellow",
             2.3,
             "290 m",
