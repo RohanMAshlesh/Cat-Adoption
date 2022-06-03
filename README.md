@@ -1,2 +1,0 @@
-# Cat-Adoption
-When Dr. Sheldon Cooper is feeling blue due to his fight with Amy, he gets himself a lot of cats. Like a lot of them! But when his mother scolds him to give them away, he finds it difficult to give them away for adoption. This is the Android app that helps Sheldon find the right people for his cats and also to give them $20 (you'll know if you watch the show). A Cat adoption app using Jetpack Compose, Android Architecture Components &amp; Kotlin.
