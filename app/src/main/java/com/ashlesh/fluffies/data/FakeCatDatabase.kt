@@ -6,7 +6,7 @@ import com.ashlesh.fluffies.model.Owner
 
 object FakeCatDatabase {
     val owner = Owner("John Doe", "I am a simple guy who loves cat", R.drawable.owner)
-    val catlist = listOf(
+    val catList = listOf(
         Cat(
             1,
             "Enrico Fermi",
