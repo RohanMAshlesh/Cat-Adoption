@@ -138,6 +138,7 @@ fun DetailsView(id: Int) {
             }
         }
 
+
         // CTA - Adopt me button
         item {
             Spacer(modifier = Modifier.height(36.dp))
