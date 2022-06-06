@@ -72,6 +72,8 @@ fun ItemCatCard(cat: Cat, onItemClicked: (cat: Cat) -> Unit) {
                     style = MaterialTheme.typography.caption
                 )
 
+
+
                 Row(verticalAlignment = Alignment.Bottom) {
 
                     val location: Painter = painterResource(id = R.drawable.ic_location)
@@ -96,6 +98,7 @@ fun ItemCatCard(cat: Cat, onItemClicked: (cat: Cat) -> Unit) {
                 horizontalArrangement = Arrangement.End
             ) {
                 GenderTag(cat.gender)
+                AvailabilityTag(false, adoption = cat.adoption)
             }
         }
     }

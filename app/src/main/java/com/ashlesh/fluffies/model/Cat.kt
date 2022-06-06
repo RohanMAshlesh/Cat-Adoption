@@ -10,5 +10,6 @@ data class Cat(
     val location: String,
     val image: Int,
     val about: String,
-    val owner: Owner
+    val owner: Owner,
+    var adoption: Boolean
 )

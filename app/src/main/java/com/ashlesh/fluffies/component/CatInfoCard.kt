@@ -15,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import com.ashlesh.fluffies.R
 
 @Composable
-fun CatInfoCard(name: String, gender: String, location: String) {
+fun CatInfoCard(name: String, gender: String, location: String, adoption: Boolean) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -28,7 +28,7 @@ fun CatInfoCard(name: String, gender: String, location: String) {
                 modifier = Modifier.padding(0.dp, 0.dp, 12.dp, 0.dp),
                 color = MaterialTheme.colors.surface,
                 fontWeight = FontWeight.Bold,
-                style = MaterialTheme.typography.h5
+                style = MaterialTheme.typography.h6
             )
             Spacer(modifier = Modifier.height(8.dp))
 
@@ -60,8 +60,14 @@ fun CatInfoCard(name: String, gender: String, location: String) {
                 style = MaterialTheme.typography.overline
             )
         }
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(2.dp, 4.dp, 0.dp, 0.dp),
+            horizontalArrangement = Arrangement.End
+        ) {
             GenderTag(gender)
+            AvailabilityTag(detail = true, adoption = adoption)
         }
     }
 }

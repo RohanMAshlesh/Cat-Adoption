@@ -2,6 +2,7 @@ package com.ashlesh.fluffies.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
@@ -35,7 +36,8 @@ fun OwnerDetails(navController: NavController, owner: Owner) {
                         imageVector = Icons.Default.ArrowBack,
                         contentDescription = null,
                         modifier = Modifier
-                            .size(24.dp, 24.dp),
+                            .size(24.dp, 24.dp)
+                            .clickable { navController.navigateUp() },
                         tint = colorResource(id = R.color.text)
                     )
                 }

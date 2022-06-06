@@ -18,7 +18,8 @@ object FakeCatDatabase {
             "850 m",
             R.drawable.cat1,
             "Named after the creator of the world's first nuclear reactor",
-            owner
+            owner,
+            false
         ),
         Cat(
             2,
@@ -30,7 +31,8 @@ object FakeCatDatabase {
             "890 m",
             R.drawable.cat2,
             "Named after American theoretical physicist, known for his work in the path integral formulation of quantum mechanics",
-            owner
+            owner,
+            true
         ),
         Cat(
             3,
@@ -42,7 +44,8 @@ object FakeCatDatabase {
             "790 m",
             R.drawable.cat3,
             "The father of the atomic bomb who loves his saucer of milk",
-            owner
+            owner,
+            true
         ),
         Cat(
             4,
@@ -54,7 +57,8 @@ object FakeCatDatabase {
             "700 m",
             R.drawable.cat4,
             "Gave the first theoretical explanation of nuclear fission",
-            owner
+            owner,
+            true
         ),
         Cat(
             5,
@@ -66,7 +70,8 @@ object FakeCatDatabase {
             "390 m",
             R.drawable.cat5,
             "German-American physicist",
-            owner
+            owner,
+            true
         ),
         Cat(
             6,
@@ -78,7 +83,8 @@ object FakeCatDatabase {
             "290 m",
             R.drawable.cat6,
             "Initially named Hermann von Helmholtz but I'm too Zazzy!",
-            owner
+            owner,
+            false
         )
     )
 

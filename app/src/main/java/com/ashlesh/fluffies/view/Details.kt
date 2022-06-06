@@ -1,5 +1,6 @@
 package com.ashlesh.fluffies.view
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -14,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -82,7 +84,7 @@ fun DetailsView(navController: NavController, id: Int) {
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
-                CatInfoCard(name, gender, location)
+                CatInfoCard(name, gender, location, adoption)
             }
         }
 
@@ -145,8 +147,17 @@ fun DetailsView(navController: NavController, id: Int) {
         // CTA - Adopt me button
         item {
             Spacer(modifier = Modifier.height(36.dp))
+            val context = LocalContext.current
             Button(
-                onClick = { /* Do something! */ },
+                onClick = {
+                    if (cat.adoption) {
+                        Toast.makeText(context, "Successfully Adopted", Toast.LENGTH_SHORT).show()
+                        cat.adoption = !cat.adoption
+                        navController.navigateUp()
+                    } else {
+                        Toast.makeText(context, "Already Adopted", Toast.LENGTH_SHORT).show()
+                    }
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(52.dp)
