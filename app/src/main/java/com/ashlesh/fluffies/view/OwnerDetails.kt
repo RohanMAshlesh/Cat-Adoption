@@ -98,7 +98,7 @@ fun OwnerDetailsView(navController: NavController, owner: Owner) {
                     textAlign = TextAlign.Start
                 )
                 Text(
-                    text = "I am the smartest person in any room and theoretical physics is the best. I used to love String Theory but now its Amy. Bazinga! It's Super Assymetry.",
+                    text = "I am the smartest person in any room and theoretical physics is the best. I used to love String Theory but now I love Amy. Bazinga! I only love Super Assymetry.",
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(16.dp, 0.dp, 16.dp, 0.dp),
