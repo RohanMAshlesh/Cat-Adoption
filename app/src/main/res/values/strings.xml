@@ -2,4 +2,5 @@
     <string name="app_name">Fluffies</string>
     <string name="text_home">Home</string>
     <string name="text_details">Details</string>
+    <string name="text_owner_details">OwnerDetails</string>
 </resources>

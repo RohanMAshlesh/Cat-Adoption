@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
 import androidx.navigation.compose.navArgument
 import com.ashlesh.fluffies.data.FakeCatDatabase
+import com.ashlesh.fluffies.data.FakeCatDatabase.owner
 import com.ashlesh.fluffies.navigation.Screen
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
@@ -64,6 +65,29 @@ fun FluffiesMain(toggleTheme: () -> Unit) {
             arguments = listOf(navArgument("id") { type = NavType.IntType })
         ) {
             Details(navController, it.arguments?.getInt("id") ?: 0)
+        }
+        composable(
+            "${Screen.OwnerDetails.route}/{owner}",
+            enterTransition = { _, _ ->
+                slideInHorizontally(
+                    initialOffsetX = { 300 },
+                    animationSpec = tween(
+                        durationMillis = 300,
+                        easing = FastOutSlowInEasing
+                    )
+                ) + fadeIn(animationSpec = tween(300))
+            },
+            exitTransition = { _, _ ->
+                slideOutHorizontally(
+                    targetOffsetX = { 300 },
+                    animationSpec = tween(
+                        durationMillis = 300,
+                        easing = FastOutSlowInEasing
+                    )
+                ) + fadeOut(animationSpec = tween(300))
+            },
+        ) {
+            OwnerDetails(navController = navController, owner = owner)
         }
     }
 }

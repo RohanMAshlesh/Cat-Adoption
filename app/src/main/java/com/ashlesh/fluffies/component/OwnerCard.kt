@@ -1,6 +1,7 @@
 package com.ashlesh.fluffies.component
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.FloatingActionButton
@@ -19,18 +20,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.ashlesh.fluffies.R
+import com.ashlesh.fluffies.model.Owner
 
 @Composable
-fun OwnerCard(name: String, bio: String, image: Int) {
+fun OwnerCard(navController: NavController, owner: Owner) {
 
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(16.dp)
+            .clickable { navController.navigate("ownerDetails/$owner") }
     ) {
         // getting the image from the drawable
-        val personImage: Painter = painterResource(id = image)
+        val personImage: Painter = painterResource(id = owner.image)
 
         Image(
             modifier = Modifier
@@ -46,7 +50,7 @@ fun OwnerCard(name: String, bio: String, image: Int) {
 
         Column(modifier = Modifier) {
             Text(
-                text = name,
+                text = owner.name,
                 color = colorResource(id = R.color.text),
                 style = MaterialTheme.typography.subtitle1,
                 fontWeight = FontWeight.W600,
@@ -55,7 +59,7 @@ fun OwnerCard(name: String, bio: String, image: Int) {
 
             Spacer(modifier = Modifier.height(8.dp))
             Text(
-                text = bio,
+                text = owner.bio,
                 color = colorResource(id = R.color.text),
                 style = MaterialTheme.typography.caption
             )

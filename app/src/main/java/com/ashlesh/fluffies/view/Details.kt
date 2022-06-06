@@ -51,13 +51,13 @@ fun Details(navController: NavController, id: Int) {
         },
 
         content = {
-            DetailsView(id)
+            DetailsView(navController, id)
         }
     )
 }
 
 @Composable
-fun DetailsView(id: Int) {
+fun DetailsView(navController: NavController, id: Int) {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -133,7 +133,10 @@ fun DetailsView(id: Int) {
                 Title(title = "Owner info")
                 Spacer(modifier = Modifier.height(16.dp))
                 owner.apply {
-                    OwnerCard(name, bio, image)
+                    Row(modifier = Modifier.clickable { navController.navigate("ownerDetails/$owner") }) {
+                        OwnerCard(navController, this@apply)
+                    }
+
                 }
             }
         }
