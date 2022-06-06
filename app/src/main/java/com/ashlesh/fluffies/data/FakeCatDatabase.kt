@@ -34,14 +34,14 @@ object FakeCatDatabase {
         ),
         Cat(
             3,
-            "Edward Teller",
+            "Robert Oppenheimer",
             2.6,
             "Male",
             "black",
             8.3,
             "790 m",
             R.drawable.cat3,
-            "The father of the hydrogen bomb who loves his saucer of milk",
+            "The father of the atomic bomb who loves his saucer of milk",
             owner
         ),
         Cat(
